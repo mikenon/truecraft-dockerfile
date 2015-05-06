@@ -31,3 +31,13 @@ To keep the server in the foreground and remove the container after it exits use
 To run the server in the background use:
 
     docker run -d -p 25565:25565 truecraft:<TAG>
+
+### Complete Example:
+
+```bash
+~$ git clone --recursive git://github.com/SirCmpwn/TrueCraft.git
+~$ cd TrueCraft/
+~/TrueCraft$ cp /path/to/Dockerfile .
+~/TrueCraft$ TAG=`git log --format="%H" -n 1 | cut -c1-10`; docker build -t "truecraft:$TAG" .
+~/TrueCraft$ docker run -it --rm -p 25565:25565 truecraft:$TAG
+```
