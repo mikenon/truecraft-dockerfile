@@ -1,5 +1,5 @@
 # truecraft-dockerfile
-A Dockerfile for building and running TrueCraft
+A Dockerfile for building and running [TrueCraft](https://github.com/SirCmpwn/TrueCraft)
 
 ### Info
 
