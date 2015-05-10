@@ -56,10 +56,15 @@ If you've already cloned TrueCraft and want to use your files instead of cloning
 
     docker run -it --rm -p 25565:25565 -v /path/to/src:/src -v /path/to/target:/target  truecraft /start.sh build
 
+The build files should now be in /path/to/target.
+
 If you've already built TrueCraft and want to run it use:
 
     docker run -it --rm -p 25565:25565 -v /path/to/target:/target -v /path/to/data:/data truecraft /start.sh run
 
+If `/path/to/data` was empty it will now contain `config.yaml` and `world`. You can edit `config.yaml` and run the above command again.
+
 The example commands have used "-it --rm" to keep the output in the foreground and remove the container when it closes. If you want to run in the background replace them with "-d"
 
     docker run -d -p 25565:25565 ...
+
